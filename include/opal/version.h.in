@@ -1,0 +1,27 @@
+#pragma once
+#ifndef _OPAL_VERSION_H_
+#define _OPAL_VERSION_H_
+
+#include "opal/pch.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#define OPAL_VERSION_MAJOR @OPAL_VERSION_MAJOR@
+#define OPAL_VERSION_MINOR @OPAL_VERSION_MINOR@
+#define OPAL_VERSION_PATCH @OPAL_VERSION_PATCH@
+
+/**
+ * @brief Gets the version of OPAL
+ * @return The version of OPAL
+ *
+ * Should output something like "OPAL 0.1.0"
+ */
+OPAL_DECL_FUNC_ND const char* opalGetVersionString();
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
