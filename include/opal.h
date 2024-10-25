@@ -5,6 +5,8 @@
 #include "opal/pch.h"
 
 #include "opal/stream.h"
+#include "opal/synth.h"
+#include "opal/sound.h"
 
 #ifdef __cplusplus
 extern "C" {

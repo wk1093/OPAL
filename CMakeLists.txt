@@ -9,7 +9,7 @@ option(OPAL_PORTAUDIO "Use PortAudio" ON)
 
 # versioning
 set(OPAL_VERSION_MAJOR 0)
-set(OPAL_VERSION_MINOR 1)
+set(OPAL_VERSION_MINOR 2)
 set(OPAL_VERSION_PATCH 0)
 
 set(PROJECT_VERSION ${OPAL_VERSION_MAJOR}.${OPAL_VERSION_MINOR}.${OPAL_VERSION_PATCH})
@@ -46,9 +46,13 @@ if (BUILD_OPAL)
     add_library(opal STATIC include/opal.h
             include/opal/pch.h
             include/opal/stream.h
+            include/opal/synth.h
+            include/opal/sound.h
             src/version.c
             src/stream.c
-            src/opal.c)
+            src/opal.c
+            src/synth.c
+            src/sound.c)
     target_include_directories(opal PUBLIC include ${PROJECT_BINARY_DIR}/include)
 
     target_link_libraries(opal PUBLIC hedley)
